@@ -31,7 +31,7 @@ class Config:
     REDIS_PORT = int(os.getenv("REDIS_PORT", "5599"))
     REDIS_DB = int(os.getenv("REDIS_DB", "0"))
     REDIS_PASSWORD = os.getenv("REDIS_PASSWORD")  # From .env
-    REDIS_USE_SSL = False  # No SSL for internal VPS
+    REDIS_USE_SSL = True  # Redis on VPS uses SSL
     REDIS_POOL_SIZE = 50
     
     # MongoDB Configuration
@@ -39,6 +39,7 @@ class Config:
     MONGODB_DATABASE = os.getenv("MONGODB_DATABASE", "spencer_ai")
     MONGODB_MAX_POOL_SIZE = 100
     MONGODB_MIN_POOL_SIZE = 10
+    MONGODB_USE_SSL = False  # VPS MongoDB doesn't use SSL
     
     # Vector Service Configuration (Replaces FAISS)
     VECTOR_SERVICE_URL = os.getenv("VECTOR_SERVICE_URL", "http://157.180.62.92:8001")

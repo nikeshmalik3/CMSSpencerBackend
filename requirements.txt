@@ -45,7 +45,7 @@ pyyaml
 psutil
 
 # Performance
-uvloop
+# uvloop  # Not supported on Windows
 
 # Testing (optional but good to have)
 pytest

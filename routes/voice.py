@@ -1,7 +1,7 @@
 """Voice and NLU routes"""
 
 from fastapi import APIRouter, HTTPException, Depends, UploadFile, File, WebSocket
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, List
 import base64
 import logging
 from datetime import datetime
