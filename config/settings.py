@@ -76,6 +76,7 @@ class Config:
     
     # File Storage Configuration
     FILE_STORAGE_BASE_PATH = os.getenv("FILE_STORAGE_PATH", "/data/spencer-ai-storage")
+    UPLOAD_DIR = os.path.join(FILE_STORAGE_BASE_PATH, "uploads")
     MAX_FILE_SIZE_MB = 100
     ALLOWED_EXTENSIONS = [
         "pdf", "doc", "docx", "xls", "xlsx", "ppt", "pptx",
