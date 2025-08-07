@@ -5,7 +5,7 @@ Using official Groq SDK for production-ready voice processing
 
 import os
 import logging
-from typing import Optional, Dict, Any, BinaryIO
+from typing import Optional, Dict, Any, BinaryIO, AsyncIterator
 from pathlib import Path
 import asyncio
 from concurrent.futures import ThreadPoolExecutor

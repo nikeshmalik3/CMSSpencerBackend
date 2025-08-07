@@ -14,7 +14,6 @@ import pymupdf4llm  # PDF to markdown conversion
 import fitz  # PyMuPDF for additional PDF operations
 import openpyxl  # Excel
 from PIL import Image  # Images
-import ezdxf  # AutoCAD DWG/DXF
 from docx import Document as WordDoc  # Word documents
 
 from agents.base_agent import BaseAgent
@@ -428,62 +427,18 @@ class DocumentProcessorAgent(BaseAgent):
     ) -> ProcessedData:
         """Process AutoCAD DWG/DXF files"""
         try:
-            # Read DXF file (DWG would need conversion first)
-            doc = ezdxf.readfile(file_path)
-            
-            text_content = []
-            structured_data = {
-                "layers": [],
-                "blocks": [],
-                "dimensions": [],
-                "entities": {}
-            }
-            
-            # Extract layers
-            for layer in doc.layers:
-                layer_info = {
-                    "name": layer.dxf.name,
-                    "color": layer.dxf.color,
-                    "linetype": layer.dxf.linetype,
-                    "on": not layer.is_off()
-                }
-                structured_data["layers"].append(layer_info)
-                text_content.append(f"Layer: {layer.dxf.name}")
-            
-            # Extract blocks (reusable components)
-            for block in doc.blocks:
-                if block.name.startswith("*"):  # Skip anonymous blocks
-                    continue
-                structured_data["blocks"].append({
-                    "name": block.name,
-                    "entity_count": len(block)
-                })
-            
-            # Count entities by type
-            msp = doc.modelspace()
-            entity_counts = {}
-            
-            for entity in msp:
-                entity_type = entity.dxftype()
-                entity_counts[entity_type] = entity_counts.get(entity_type, 0) + 1
-                
-                # Extract dimensions
-                if entity_type == "DIMENSION":
-                    structured_data["dimensions"].append({
-                        "type": entity.dxf.dimtype,
-                        "text": entity.dxf.text
-                    })
-                    text_content.append(f"Dimension: {entity.dxf.text}")
-                
-                # Extract text entities
-                elif entity_type in ["TEXT", "MTEXT"]:
-                    text_content.append(f"Text: {entity.dxf.text}")
-            
-            structured_data["entities"] = entity_counts
-            
+            # CAD file processing not available in this version
             return ProcessedData(
-                text_content="\n".join(text_content),
-                structured_data=structured_data
+                text_content="AutoCAD file processing is not available in this deployment.",
+                structured_data={
+                    "error": "CAD file processing disabled",
+                    "message": "AutoCAD DWG/DXF file processing requires additional libraries not included in this deployment."
+                },
+                metadata={
+                    "file_type": "autocad",
+                    "status": "unsupported"
+                },
+                embeddings=[]
             )
             
         except Exception as e:

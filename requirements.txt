@@ -16,18 +16,19 @@ redis
 openai
 groq
 numpy
+tiktoken
 
 # Document Processing
 PyMuPDF
 pymupdf4llm
 openpyxl
 python-docx
-ezdxf
 Pillow
 
 # Auth & Security
 PyJWT
 python-jose[cryptography]
+passlib[bcrypt]
 
 # Validation
 pydantic
@@ -38,6 +39,15 @@ email-validator
 python-dotenv
 orjson
 structlog
+pyyaml
 
 # System Monitoring
 psutil
+
+# Performance
+uvloop
+
+# Testing (optional but good to have)
+pytest
+pytest-asyncio
+httpx
