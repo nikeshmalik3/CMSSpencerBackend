@@ -290,4 +290,4 @@ class GroqWhisperClient:
         logger.info("Groq Whisper client closed")
 
 # Global instance
-groq_whisper = GroqWhisperClient()
+groq_whisper_client = GroqWhisperClient()
