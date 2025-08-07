@@ -1,0 +1,62 @@
+# Core Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+
+# Async HTTP Client
+aiohttp==3.9.1
+aiofiles==23.2.1
+
+# Authentication
+PyJWT==2.8.0
+python-jose[cryptography]==3.3.0
+
+# Database Drivers
+redis==5.0.1
+motor==3.3.2  # MongoDB async driver
+pymongo==4.6.1
+
+# Vector Database
+faiss-cpu==1.7.4
+numpy==1.24.3
+
+# AI/ML Dependencies
+openai==1.6.1  # For OpenRouter API
+tiktoken==0.5.2  # Token counting
+
+# Document Processing
+PyMuPDF==1.23.8  # PDF processing
+pymupdf4llm==0.0.9  # PDF to markdown conversion for LLMs
+openpyxl==3.1.2  # Excel files
+python-docx==1.1.0  # Word documents
+ezdxf==1.1.3  # AutoCAD DWG/DXF files
+Pillow==10.1.0  # Image processing
+
+# Voice/Speech
+# Note: Whisper and Deepgram have their own setup
+
+# Utilities
+python-dotenv==1.0.0
+redis==5.0.1  # Already above but ensuring async redis support
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# Logging & Monitoring
+structlog==24.1.0
+
+# Development
+pytest==7.4.3
+pytest-asyncio==0.23.3
+black==23.12.1
+flake8==7.0.0
+mypy==1.8.0
+
+# Performance
+orjson==3.9.10  # Fast JSON
+uvloop==0.19.0  # Fast event loop
+
+# File Storage - Using Spencer File Manager API
+# No cloud storage needed - files stored locally via Spencer File Manager
+
+# Voice Processing
+groq==0.11.0  # Official Groq SDK for Whisper speech-to-text

@@ -1,0 +1,91 @@
+{
+  "endpoints": {
+    "clients": {
+      "list": "/api/clients",
+      "get": "/api/clients/5",
+      "users": "/api/clients/5/users",
+      "projects": "/api/clients/5/projects",
+      "departments": "/api/clients/5/departments",
+      "permissions": "/api/clients/5/permissions",
+      "roles": "/api/clients/5/roles",
+      "user_groups": "/api/clients/5/user-groups",
+      "supplier_groups": "/api/clients/5/supplier-groups",
+      "companies": "/api/clients/5/companies",
+      "manufacturers": "/api/clients/5/manufacturers",
+      "subscriptions": "/api/clients/5/subscriptions",
+      "on_site_selfie": "/api/clients/5/on-site-selfie"
+    },
+    "orders": {
+      "list": "/api/orders",
+      "take_off": "/api/take-off-orders",
+      "tender": "/api/tender-orders"
+    },
+    "callouts": {
+      "list": "/api/call-outs",
+      "running": "/api/users/3392/call-outs/running"
+    },
+    "projects": {
+      "list": "/api/projects"
+    },
+    "users": {
+      "list": "/api/users",
+      "get": "/api/users/3392"
+    },
+    "financial": {
+      "invoices": "/api/invoices",
+      "invoices_in": "/api/invoices-in",
+      "credit_notes": "/api/credit-notes",
+      "payment_vouchers": "/api/payment-vouchers",
+      "costing": "/api/costing",
+      "batch_reconcile": "/api/batch-reconcile"
+    },
+    "quality": {
+      "qa_trackers": "/api/qa-trackers",
+      "qa_categories": "/api/qa-categories",
+      "quality_assessments": "/api/quality-assessments",
+      "pre_checks": "/api/pre-checks"
+    },
+    "time": {
+      "timesheet": "/api/oss/timesheet",
+      "weekly_reports": "/api/on-site-selfie/weekly-reports",
+      "daily_reports": "/api/onsiteselfie/daily-reports",
+      "timesheet_builder": "/api/on-site-selfie/timesheet-builder",
+      "clock_in": "/api/hub/oss/clock-in",
+      "relocate": "/api/oss/relocate"
+    },
+    "hr": {
+      "holiday_requests": "/api/holiday-requests",
+      "holiday_requests_all": "/api/holiday-requests/all",
+      "holiday_request": "/api/holiday-request"
+    },
+    "inventory": {
+      "rental_items": "/api/rental-items",
+      "return_requests": "/api/return-requests"
+    },
+    "suppliers": {
+      "list": "/api/suppliers"
+    },
+    "misc": {
+      "notifications": "/api/notifications",
+      "subscriptions": "/api/subscriptions",
+      "quotes_mismatch": "/api/quotes-mismatch",
+      "schedule_manager": "/api/schedule-manager"
+    },
+    "sage": {
+      "sages": "/api/sages",
+      "sages_description": "/api/sages_description",
+      "sages_nominal_code": "/api/sages_nominal_code"
+    },
+    "payslips": {
+      "slip_send": "/api/slip-send",
+      "slip_send_templates": "/api/slip-send/templates"
+    }
+  },
+  "metadata": {
+    "total_endpoints": 52,
+    "test_date": "2025-08-07",
+    "success_rate": "100%",
+    "base_url": "https://test.companiesms.co.uk",
+    "method": "GET"
+  }
+}

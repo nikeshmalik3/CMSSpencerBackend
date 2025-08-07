@@ -1,0 +1,28 @@
+# Coolify Configuration for Spencer AI Backend
+# Domain: spencerai-backend.cmsdeskai.com
+
+# Build Configuration
+BUILD_PACK=docker_compose
+DOCKER_FILE=Dockerfile
+COMPOSE_FILE=docker-compose.yml
+
+# Port Configuration
+PORT=8888
+EXPOSE_PORT=8888
+
+# Health Check
+HEALTH_CHECK_PATH=/health
+HEALTH_CHECK_INTERVAL=30s
+
+# Resource Limits
+MEMORY_LIMIT=2G
+CPU_LIMIT=2
+
+# Auto Deploy
+AUTO_DEPLOY=true
+BRANCH=main
+
+# Domain
+DOMAIN=spencerai-backend.cmsdeskai.com
+SSL=true
+FORCE_HTTPS=true
